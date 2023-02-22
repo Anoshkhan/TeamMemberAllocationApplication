@@ -25,20 +25,78 @@ const Employees = () => {
     designation: "Designer",
     gender:"Male",
     teamName:"TeamC",
-  }]);
+    
+  },
+  {
+    id: 4,
+    fullName: "Smith",
+    designation: "Software Engnieer",
+    gender:"Male",
+    teamName:"TeamD",
+  },
+  {
+    id: 5,
+    fullName: "Shelly",
+    designation: "UX Designer",
+    gender:"Female",
+    teamName:"TeamD",
+  },
+  {
+    id: 6,
+    fullName: "Anosh Khan",
+    designation: "Mern Developer",
+    gender:"Female",
+    teamName:"TeamB",
+  },
+  {
+    id: 7,
+    fullName: "Amar",
+    designation: "Laravel Developer",
+    gender:"Male",
+    teamName:"TeamA",
+  },
+  {
+    id: 8,
+    fullName: "Ahsan",
+    designation: "Marketing Manager",
+    gender:"Male",
+    teamName:"TeamA",
+  },
+  {
+    id: 9,
+    fullName: "Sara",
+    designation: "Mern Developer",
+    gender:"Female",
+    teamName:"TeamC",
+  },
+  {
+    id: 10,
+    fullName: "Willey",
+    designation: "React Developer",
+    gender:"Male",
+    teamName:"TeamB",
+  }
+]);
 
   return (
     <main className='container'>
-    <div>
-      <div>
+    <div className='row justify-content-center mt-3 mb-3'>
+      <div className='col-8'>
+      <div className='card-collection'>
       {
       employees.map((employee) =>(
-        <>
-        <p>{employee.fullName}</p>
-        <img src={femaleProfile}/>
-        </>
+        <div id={employee.id} className="card m-2" style={{cursor: "pointer"}}>
+          {(employee.gender === 'Male') ? <img src={maleProfile} className="card-img-top"/>
+                                        : <img src={femaleProfile} className="card-img-top"/>
+          }
+          <div className='card-body'>
+          <h6 className='card-body-title'><b>Full Name: </b>{employee.fullName}</h6>
+          <p className='card-text'><b>Designation: </b>{employee.designation}</p>
+          </div>
+        </div>
       ))
     }
+    </div>
       </div>
     </div>
     </main>
