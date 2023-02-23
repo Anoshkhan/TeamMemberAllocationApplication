@@ -82,6 +82,16 @@ const Employees = () => {
     <main className='container'>
     <div className='row justify-content-center mt-3 mb-3'>
       <div className='col-8'>
+          <select>
+            <option value="TeamA">TeamA</option>
+            <option value="TeamB">TeamB</option>
+            <option value="TeamB">TeamC</option>
+            <option value="TeamD">TeamD</option>
+          </select>
+      </div>
+    </div>
+    <div className='row justify-content-center mt-3 mb-3'>
+      <div className='col-11'>
       <div className='card-collection'>
       {
       employees.map((employee) =>(
